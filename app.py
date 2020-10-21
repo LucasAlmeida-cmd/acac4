@@ -15,7 +15,7 @@ def nao_entre_em_panico():
         proximo = proximo + anterior
         anterior = tmp
         found = found + 1
-        resposta += str(pro) + ','
+        resposta += str(proximo) + ','
 
     return resposta
 
