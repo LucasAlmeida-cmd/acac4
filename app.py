@@ -5,19 +5,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def nao_entre_em_panico():
-    pro = 1
-    ant = 0
+    proximo = 1
+    anterior = 0
     limite = 50
-    f = 0
-    r = "0, "
-    while (f < limite):
-        x = pro
-        pro = pro + ant
-        ant = x
-        f = f + 1
-        r += str(pro) + ','
+    found = 0
+    resposta = "0, "
+    while (found < limite):
+        tmp = proximo
+        proximo = proximo + anterior
+        anterior = tmp
+        found = found + 1
+        resposta += str(pro) + ','
 
-    return r
+    return resposta
 
 
 if __name__ == "__main__":
