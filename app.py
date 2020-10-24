@@ -4,21 +4,26 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def nao_entre_em_panico():
-    proximo = 1
-    anterior = 0
-    limite = 50
-    found = 0
-    resposta = "0, "
-    while (found < limite):
-        tmp = proximo
-        proximo = proximo + anterior
-        anterior = tmp
-        found = found + 1
-        resposta += str(proximo) + ','
+def fibonaci():
+    resposta = '0,1,'
+    indice1 = 0
+    indice2 = 1
+    x = [0, 1]
+    y = None
+    inicio = 0
+    resposta1 = 1
+    while resposta1 <= 48:
+        resposta1 += 1
+        y = x[indice1] + x[indice2]
+        x.append(y)
+        resposta += str(y) + ','
+        indice1 += 1
+        indice2 += 1
 
-    return resposta
+    print(resposta)
 
+
+fibonaci()
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
