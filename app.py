@@ -12,7 +12,7 @@ def fibonaci():
     y = None
     inicio = 0
     resposta1 = 1
-    while resposta1 <= 48:
+    while resposta1 <= 50:
         resposta1 += 1
         y = x[indice1] + x[indice2]
         x.append(y)
