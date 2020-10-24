@@ -20,10 +20,9 @@ def fibonaci():
         indice1 += 1
         indice2 += 1
 
-    print(resposta)
+    return resposta
 
 
-fibonaci()
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
